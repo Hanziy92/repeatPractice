@@ -75,7 +75,8 @@
 
 
 
-const btn = document.querySelectorAll('button');
+const overlay = document.querySelector('.overlay'),
+      btn = overlay.querySelectorAll('button');
 
 // // btn.onclick = function () {
 // //    alert('Click');
@@ -101,13 +102,22 @@ const btn = document.querySelectorAll('button');
 
 
 
-let i = 0;
+// let i = 0;
+// const deleteElement = (e) => {
+//    console.log(e.target);
+//    i++;
+//    if(i == 2) {
+//       btn[0].removeEventListener('click', deleteElement);
+//    }
+// };
+
+// btn[0].addEventListener('click', deleteElement);
+
 const deleteElement = (e) => {
-   console.log(e.target);
-   i++;
-   if(i == 2) {
-      btn[0],removeEventListener('click', deleteElement);
-   }
+      console.log(e.target);
+      console.log(e.type);
+     
 };
 
-btn[0],addEventListener('click', deleteElement);
+btn[0].addEventListener('click', deleteElement);
+overlay.addEventListener('click', deleteElement);
