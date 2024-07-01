@@ -75,8 +75,8 @@
 
 
 
-const overlay = document.querySelector('.overlay'),
-      btn = document.querySelectorAll('button');
+// const overlay = document.querySelector('.overlay'),
+//       btn = document.querySelectorAll('button');
 
 // // btn.onclick = function () {
 // //    alert('Click');
@@ -113,25 +113,45 @@ const overlay = document.querySelector('.overlay'),
 
 // btn[0].addEventListener('click', deleteElement);
 
-const deleteElement = (e) => {
-      console.log(e.target);
-      console.log(e.type);
+// const deleteElement = (e) => {
+//       console.log(e.target);
+//       console.log(e.type);
      
-};
+// };
 
 // btn[0].addEventListener('click', deleteElement);
 // overlay.addEventListener('click', deleteElement);
 
 
-const link = document.querySelector('a');
-link.addEventListener('click', (e) => {
-   e.preventDefault();
+// const link = document.querySelector('a');
+// link.addEventListener('click', (e) => {
+//    e.preventDefault();
 
-   console.log(e.target);
-});
+//    console.log(e.target);
+// });
 
-btn.forEach(item => {
-   item.addEventListener('click', () => {
-      console.log('hi');
-   }, {once: true});
-});
+// btn.forEach(item => {
+//    item.addEventListener('click', () => {
+//       console.log('hi');
+//    }, {once: true});
+// });
+
+
+
+// console.log(document.body.childNodes); // получаєм псевдо масив всіх  батьківських елементів
+// console.log(document.body.firstChild);
+// console.log(document.body.lastdNodes); 
+
+// console.log(document.querySelector('#current').parentNode);
+// console.log(document.querySelector('[data-current = "3"]').nextSibling);
+// console.log(document.querySelector('[data-current = "3"]').nextElementSibling);
+// console.log(document.querySelector('[data-current = "3"]').previousElementSibling);
+// console.log(document.body.firstElementChild);
+
+for (let node of document.body.childNodes) {
+   if (node.nodeName == '#text') {
+      continue;
+   } else {
+      console.log(node);
+   }
+}
