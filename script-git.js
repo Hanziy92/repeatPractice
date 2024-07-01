@@ -76,7 +76,7 @@
 
 
 const overlay = document.querySelector('.overlay'),
-      btn = overlay.querySelectorAll('button');
+      btn = document.querySelectorAll('button');
 
 // // btn.onclick = function () {
 // //    alert('Click');
@@ -119,8 +119,8 @@ const deleteElement = (e) => {
      
 };
 
-btn[0].addEventListener('click', deleteElement);
-overlay.addEventListener('click', deleteElement);
+// btn[0].addEventListener('click', deleteElement);
+// overlay.addEventListener('click', deleteElement);
 
 
 const link = document.querySelector('a');
@@ -128,4 +128,10 @@ link.addEventListener('click', (e) => {
    e.preventDefault();
 
    console.log(e.target);
+});
+
+btn.forEach(item => {
+   item.addEventListener('click', () => {
+      console.log('hi');
+   }, {once: true});
 });
