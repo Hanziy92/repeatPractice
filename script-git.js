@@ -121,3 +121,11 @@ const deleteElement = (e) => {
 
 btn[0].addEventListener('click', deleteElement);
 overlay.addEventListener('click', deleteElement);
+
+
+const link = document.querySelector('a');
+link.addEventListener('click', (e) => {
+   e.preventDefault();
+
+   console.log(e.target);
+});
