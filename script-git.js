@@ -148,10 +148,104 @@
 // console.log(document.querySelector('[data-current = "3"]').previousElementSibling);
 // console.log(document.body.firstElementChild);
 
-for (let node of document.body.childNodes) {
-   if (node.nodeName == '#text') {
-      continue;
+// for (let node of document.body.childNodes) {
+//    if (node.nodeName == '#text') {
+//       continue;
+//    } else {
+//       console.log(node);
+//    }
+// }
+
+
+function pow(a, b) {
+   if (b === 1) {
+      return a;
    } else {
-      console.log(node);
+      return a * pow(a, b - 1);
    }
-}
+};
+
+console.log(pow(2, 3));
+
+
+let studets = {
+   js: [{
+      name: 'Jonh',
+      progress: 100
+   }, {
+      name: 'Petro',
+      progress: 60
+   }],
+
+   html: {
+      basic: [{
+         name: 'Sofia',
+         progress: 20
+      }, {
+         name: 'Ann',
+         progress: 18
+      }],
+
+      pro: [{
+         name: 'Sam',
+         progress: 10
+      }],
+      semi: {
+         studets: [{
+            name: 'Test',
+            progress: 100
+         }]
+      }
+   }
+};
+
+function getTotatlProgressByIteration(data) {
+   let totalProgress = 0;
+   let studets = 0;
+
+   for (let course of Object.values(data)) {
+      if (Array.isArray(course)) {
+         studets += course.length;
+         for (let i = 0; i < course.length; i++) {
+            totalProgress += course[i].progress;
+         }
+      } else {
+         for (let subCourse of Object.values(course)) {
+            studets += subCourse.length;
+            for (let i = 0; i < subCourse.length; i++) {
+               totalProgress += subCourse[i].progress;
+            }
+         }
+      }
+   }
+
+   return totalProgress / studets;
+};
+
+// console.log(getTotatlProgressByIteration(studets));
+
+
+
+
+function getTotatlProgressByRecorsion(data) {
+   if (Array.isArray(data)) {
+      let total = 0;
+      for (let i = 0; i < data.length; i++) {
+         total += data[i].progress;
+      }
+
+      return [total, data.length];
+   } else {
+      let total = [0, 0];
+      for (let subData of Object.values(data)) {
+        const subdataArray =  getTotatlProgressByRecorsion(subData);
+        total[0] += subdataArray[0];
+        total[1] += subdataArray[1];
+      }
+      return total;
+   }
+};
+
+const result = getTotatlProgressByRecorsion(studets);
+
+console.log(result[0] / result[1]);
