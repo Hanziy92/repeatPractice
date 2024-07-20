@@ -157,95 +157,140 @@
 // }
 
 
-function pow(a, b) {
-   if (b === 1) {
-      return a;
-   } else {
-      return a * pow(a, b - 1);
-   }
-};
+// function pow(a, b) {
+//    if (b === 1) {
+//       return a;
+//    } else {
+//       return a * pow(a, b - 1);
+//    }
+// };
 
-console.log(pow(2, 3));
+// console.log(pow(2, 3));
 
 
-let studets = {
-   js: [{
-      name: 'Jonh',
-      progress: 100
-   }, {
-      name: 'Petro',
-      progress: 60
-   }],
+// let studets = {
+//    js: [{
+//       name: 'Jonh',
+//       progress: 100
+//    }, {
+//       name: 'Petro',
+//       progress: 60
+//    }],
 
-   html: {
-      basic: [{
-         name: 'Sofia',
-         progress: 20
-      }, {
-         name: 'Ann',
-         progress: 18
-      }],
+//    html: {
+//       basic: [{
+//          name: 'Sofia',
+//          progress: 20
+//       }, {
+//          name: 'Ann',
+//          progress: 18
+//       }],
 
-      pro: [{
-         name: 'Sam',
-         progress: 10
-      }],
-      semi: {
-         studets: [{
-            name: 'Test',
-            progress: 100
-         }]
-      }
-   }
-};
+//       pro: [{
+//          name: 'Sam',
+//          progress: 10
+//       }],
+//       semi: {
+//          studets: [{
+//             name: 'Test',
+//             progress: 100
+//          }]
+//       }
+//    }
+// };
 
-function getTotatlProgressByIteration(data) {
-   let totalProgress = 0;
-   let studets = 0;
+// function getTotatlProgressByIteration(data) {
+//    let totalProgress = 0;
+//    let studets = 0;
 
-   for (let course of Object.values(data)) {
-      if (Array.isArray(course)) {
-         studets += course.length;
-         for (let i = 0; i < course.length; i++) {
-            totalProgress += course[i].progress;
-         }
-      } else {
-         for (let subCourse of Object.values(course)) {
-            studets += subCourse.length;
-            for (let i = 0; i < subCourse.length; i++) {
-               totalProgress += subCourse[i].progress;
-            }
-         }
-      }
-   }
+//    for (let course of Object.values(data)) {
+//       if (Array.isArray(course)) {
+//          studets += course.length;
+//          for (let i = 0; i < course.length; i++) {
+//             totalProgress += course[i].progress;
+//          }
+//       } else {
+//          for (let subCourse of Object.values(course)) {
+//             studets += subCourse.length;
+//             for (let i = 0; i < subCourse.length; i++) {
+//                totalProgress += subCourse[i].progress;
+//             }
+//          }
+//       }
+//    }
 
-   return totalProgress / studets;
-};
+//    return totalProgress / studets;
+// };
 
 // console.log(getTotatlProgressByIteration(studets));
 
 
 
 
-function getTotatlProgressByRecorsion(data) {
-   if (Array.isArray(data)) {
-      let total = 0;
-      for (let i = 0; i < data.length; i++) {
-         total += data[i].progress;
-      }
+// function getTotatlProgressByRecorsion(data) {
+//    if (Array.isArray(data)) {
+//       let total = 0;
+//       for (let i = 0; i < data.length; i++) {
+//          total += data[i].progress;
+//       }
 
-      return [total, data.length];
-   } else {
-      let total = [0, 0];
-      for (let subData of Object.values(data)) {
-        const subdataArray =  getTotatlProgressByRecorsion(subData);
-        total[0] += subdataArray[0];
-        total[1] += subdataArray[1];
+//       return [total, data.length];
+//    } else {
+//       let total = [0, 0];
+//       for (let subData of Object.values(data)) {
+//         const subdataArray =  getTotatlProgressByRecorsion(subData);
+//         total[0] += subdataArray[0];
+//         total[1] += subdataArray[1];
+//       }
+//       return total;
+//    }
+// };
+
+// const result = getTotatlProgressByRecorsion(studets);
+
+// console.log(result[0] / result[1]);
+
+
+const btns = document.querySelectorAll('button'),
+      wrapper = document.querySelector('.btn-block');
+
+// console.log(btns[0].classList.length);
+// console.log(btns[0].classList.item(0));
+// console.log(btns[0].classList.add('red'));
+// console.log(btns[0].classList.remove('blue'));
+// console.log(btns[0].classList.toggle('blue'));
+
+// console.log(btns[1].classList.add('red'));
+// if (btns[1].classList.contains('red')) {
+//    console.log('red');
+// }
+
+btns[0].addEventListener('click', () => {
+   if (!btns[1].classList.contains('red')) {
+      btns[1].classList.add('red');
+      } else {
+         btns[1].classList.remove('red');
       }
-      return total;
+});
+
+
+// wrapper.addEventListener('click', (e) => {
+//    if (e.target && e.target.classList.contains('blue ')) {
+//       console.log('Hello');
+//    }
+// });
+
+// wrapper.addEventListener('click', (e) => {
+//    if (e.target && e.target.tagName == "BUTTON") {
+//       console.log('Hello');
+//    }
+// });
+wrapper.addEventListener('click', (e) => {
+   if (e.target && e.target.matches('button.red')) {
+      console.log('Hello');
    }
-};
+});
 
-const result = getTotatlProgressByRecorsion(studets);
-
-console.log(result[0] / result[1]);
+const btn = document.createElement('button');
+btn.classList.add('red');
+wrapper.append(btn);
