@@ -251,8 +251,8 @@
 // console.log(result[0] / result[1]);
 
 
-const btns = document.querySelectorAll('button'),
-      wrapper = document.querySelector('.btn-block');
+// const btns = document.querySelectorAll('button'),
+//       wrapper = document.querySelector('.btn-block');
 
 // console.log(btns[0].classList.length);
 // console.log(btns[0].classList.item(0));
@@ -265,13 +265,13 @@ const btns = document.querySelectorAll('button'),
 //    console.log('red');
 // }
 
-btns[0].addEventListener('click', () => {
-   if (!btns[1].classList.contains('red')) {
-      btns[1].classList.add('red');
-      } else {
-         btns[1].classList.remove('red');
-      }
-});
+// btns[0].addEventListener('click', () => {
+//    if (!btns[1].classList.contains('red')) {
+//       btns[1].classList.add('red');
+//       } else {
+//          btns[1].classList.remove('red');
+//       }
+// });
 
 
 // wrapper.addEventListener('click', (e) => {
@@ -285,12 +285,14 @@ btns[0].addEventListener('click', () => {
 //       console.log('Hello');
 //    }
 // });
-wrapper.addEventListener('click', (e) => {
-   if (e.target && e.target.matches('button.red')) {
-      console.log('Hello');
-   }
-});
+// wrapper.addEventListener('click', (e) => {
+//    if (e.target && e.target.matches('button.red')) {
+//       console.log('Hello');
+//    }
+// });
 
-const btn = document.createElement('button');
-btn.classList.add('red');
-wrapper.append(btn);
+// const btn = document.createElement('button');
+// btn.classList.add('red');
+// wrapper.append(btn);
+
+
