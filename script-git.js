@@ -296,14 +296,14 @@
 // wrapper.append(btn);
 
 
-const boxesQuery = document.querySelectorAll('.box');
-const boxesGet = document.getElementsByClassName('box');
+// const boxesQuery = document.querySelectorAll('.box');
+// const boxesGet = document.getElementsByClassName('box');
 
-boxesQuery.forEach(box => {
-   if (box.matches('.this')) console.log(box );  
-});
+// boxesQuery.forEach(box => {
+//    if (box.matches('.this')) console.log(box );  
+// });
 
-console.log(boxesQuery[0].closest('.wrapper'));
+// console.log(boxesQuery[0].closest('.wrapper'));
 // boxesQuery[0].remove();
 // boxesGet[0].remove();
 
@@ -319,5 +319,48 @@ console.log(boxesQuery[0].closest('.wrapper'));
 // console.log(Array.from(boxesGet));
 
 
+// const obj = {
+//    name: 'Test',
+//    [Symbol('id')]: 1
+// }
+
+// for (let value in obj) console.log(value);
+
+// console.log(obj);
+
+   
+// let id = Symbol();
+// let id = Symbol("id");
+
+// obj[id] = 1;
+
+// console.log(obj[id]);
 
 
+
+// const obj = {
+//       name: 'Test',
+//       [ Symbol("id")]: 1,
+//       getId: function () {
+//          return this[id];
+//       }
+//    }
+   
+//    // console.log(obj.getId());
+//    console.log(Object.getOwnPropertySymbols(obj));
+//    console.log(obj[Object.getOwnPropertySymbols(obj)[0]]);
+
+
+// const myAwesomeDB = {
+//       monies: [],
+//       actors: [],
+//       [Symbol('id')]: 2
+// }
+
+
+// // код бібліотеки
+
+// myAwesomeDB.id ='32324234';
+
+// console.log(myAwesomeDB.id);
+// console.log(myAwesomeDB);
