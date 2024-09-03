@@ -364,3 +364,43 @@
 
 // console.log(myAwesomeDB.id);
 // console.log(myAwesomeDB);
+
+
+// const user = {
+//    name: 'Alex',
+//    surname: 'Smith',
+//    birthday: '20/04/1998',
+//    showMyPublicData: function() {
+//          console.log(`${this.name} ${this.surname}`);
+//    }
+// }
+
+// Object.defineProperty(user, 'birthday', {writable: false});
+
+// const user = {
+//    name: 'Alex',
+//    surname: 'Smith',
+//    showMyPublicData: function() {
+//          console.log(`${this.name} ${this.surname}`);
+//    }
+// }
+
+// Object.defineProperty(user, 'birthday', {value: prompt('Date?', ''), enumerable: true, configurable: true});
+
+// console.log(Object.getOwnPropertyDescriptor(user, 'birthday'));
+
+// Object.defineProperty(user, 'showMyPublicData', {enumerable: false});
+
+// Object.defineProperties(user, {
+//    name: {writable: false},
+//    surname: {enumerable: false}
+// }); 
+
+
+// console.log(Object.getOwnPropertyDescriptor(user, 'name'));
+// Object.defineProperty(user, 'name', {writable: false});
+// Object.defineProperty(user, 'gender', {value: 'male'}); 
+
+// writable
+//enumerable
+//configurable
