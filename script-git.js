@@ -483,3 +483,39 @@
 
 // const newObjectUser = Object.fromEntries(userMap);
 // console.log(newObjectUser);
+
+// const arr = [1, 1, 2, 3, 4, 5, 6, 5];
+// const set = new Set(arr);
+// console.log(set); 
+
+// const students = ['Olga', 'Petro', 'Sofia', 'Petro'];
+
+// function unique(arr) {
+//    return Array.from(new Set(arr));
+// }
+
+// const result = unique(students);
+
+// console.log(result);
+
+// const set = new Set(students);
+// set.add('Anna')
+//    .add('Olga');
+
+// console.log(set);
+
+
+// set.delete(value);
+// set.has(value);
+// set.clear();
+// set.siz;
+
+// for (let value of set) console.log(value);
+// set.forEach((value, valueAgaing, set) => {
+//    console.log(value, valueAgaing);
+// });
+
+// console.log(set.values());
+// console.log(set.keys());
+// console.log(set.entries());
+
