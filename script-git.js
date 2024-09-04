@@ -404,3 +404,82 @@
 // writable
 //enumerable
 //configurable
+
+
+// const shops = [
+//    {rice: 500},
+//    {oil: 200},
+//    {bread: 50}
+// ];
+
+// const budget = [500, 1200, 1800];
+
+// const map = new Map();
+
+// shops.forEach((item, i) => {
+//    map.set(item, budget[i]);
+// });
+
+// map.set(shops[0], 500)
+//    .set(shops[1], 1200)
+//    .set(shops[2], 1800);
+
+
+// console.log(map.get(shops[0])); // 500
+// console.log(map.has(shops[0])); // true
+
+// map.delete(kye); //  видаляє
+// map.clear(); // очищає весю мапу
+// console.log(map.size); // скіки обєктів в мапі
+
+
+// const shops = [
+//       {rice: 500},
+//       {oil: 200},
+//       {bread: 50}
+//    ];
+   
+//    const budget = [500, 1200, 1800];
+   
+//    const map = new Map([
+//       [{paper: 400}, 8000]
+//    ]);
+   
+//    shops.forEach((item, i) => {
+//       map.set(item, budget[i]);
+//    });
+   
+// const goods = [];
+
+//    for (let shop of map.keys()) {
+//       goods.push(Object.keys(shop)[0]); 
+//    }
+
+// console.log(goods);
+
+// for (let price of map.values()) {
+//    console.log(price);
+// }
+
+// for (let {shop, price} of map.entries()) {
+//    console.log(shop, price);
+// }
+
+// map.forEach((value, key, map) => {
+//    console.log(key, value);
+// });
+
+
+// const user = {
+//    name: 'Alex',
+//    surname: 'Smith',
+//    showMyPublicData: function() {
+//          console.log(`${this.name} ${this.surname}`);
+//    }
+// }
+
+// const userMap = new Map(Object.entries(user));
+// console.log(userMap);
+
+// const newObjectUser = Object.fromEntries(userMap);
+// console.log(newObjectUser);
