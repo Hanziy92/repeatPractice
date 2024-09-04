@@ -519,3 +519,13 @@
 // console.log(set.keys());
 // console.log(set.entries());
 
+
+// const bigNum = 5465465321321654651321216848151321321651652165165121658465416n;
+
+// const bsgNumTwo = BigInt(4648986516519845621651632565654652132132165465146);
+
+// const bigint = 1n;
+// const number = 2;
+
+// console.log(bigint + BigInt(number));
+// console.log(Number(bigint) + number);
