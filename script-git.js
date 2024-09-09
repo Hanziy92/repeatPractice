@@ -600,3 +600,27 @@
 // let and = new Date();
 
 // alert(`цикл відпрацював за ${and - start} мілісекунд`);
+
+
+
+const box = document.querySelector('.box');
+const btn = document.querySelector('button');
+// const width = box.clientWidth;
+// const heigth = box.clientHeight;
+// const width = box.offsetWidth;
+// const heigth = box.offesttHeight;
+// const heigth = box.scrollHeightt;
+
+// console.log(width, heigth);
+
+   btn.addEventListener('click', () => {
+      box.style.heigth = box.scrollHeight + 'px';
+      console.log(box.scrollTop);
+   }); 
+
+   console.log(box.getBoundingClientRect());
+   console.log(box.getBoundingClientRect().top);
+
+   const style = window.getComputedStyle(box);
+
+   console.log(document.documentElement.scrollTop);
