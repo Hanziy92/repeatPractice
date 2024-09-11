@@ -603,8 +603,8 @@
 
 
 
-const box = document.querySelector('.box');
-const btn = document.querySelector('button');
+// const box = document.querySelector('.box');
+// const btn = document.querySelector('button');
 // const width = box.clientWidth;
 // const heigth = box.clientHeight;
 // const width = box.offsetWidth;
@@ -613,14 +613,40 @@ const btn = document.querySelector('button');
 
 // console.log(width, heigth);
 
-   btn.addEventListener('click', () => {
-      box.style.heigth = box.scrollHeight + 'px';
-      console.log(box.scrollTop);
-   }); 
+   // btn.addEventListener('click', () => {
+   //    box.style.heigth = box.scrollHeight + 'px';
+   //    console.log(box.scrollTop);
+   // }); 
 
-   console.log(box.getBoundingClientRect());
-   console.log(box.getBoundingClientRect().top);
+   // console.log(box.getBoundingClientRect());
+   // console.log(box.getBoundingClientRect().top);
 
-   const style = window.getComputedStyle(box);
+   // const style = window.getComputedStyle(box);
 
-   console.log(document.documentElement.scrollTop);
+   // console.log(document.documentElement.scrollTop);
+
+function User(name, id) {
+   this.name = name;
+   this.id = id;
+   this.human = true;
+   this.hello = function() {
+      console.log(`Hello ${this.name}`);
+   };
+}
+
+User.prototype.exit = function(name) {
+   console.log(`User ${this.name} exit`);
+}
+ 
+alex.exit();
+
+const petro = new User('Petro', 32);
+const alex = new User('Alex', 28);   
+
+alex.name = 'jonh';
+petro.hello();
+alex.hello();
+
+console.log(petro);
+console.log(alex);
+ 
