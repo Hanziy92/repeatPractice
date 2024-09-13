@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // const personalMovieDB = {
 //    count: numberOfFilms,
@@ -625,28 +625,101 @@
 
    // console.log(document.documentElement.scrollTop);
 
-function User(name, id) {
-   this.name = name;
-   this.id = id;
-   this.human = true;
-   this.hello = function() {
-      console.log(`Hello ${this.name}`);
-   };
-}
+// function User(name, id) {
+//    this.name = name;
+//    this.id = id;
+//    this.human = true;
+//    this.hello = function() {
+//       console.log(`Hello ${this.name}`);
+//    };
+// }
 
-User.prototype.exit = function(name) {
-   console.log(`User ${this.name} exit`);
-}
+// User.prototype.exit = function(name) {
+//    console.log(`User ${this.name} exit`);
+// }
  
-alex.exit();
+// alex.exit();
 
-const petro = new User('Petro', 32);
-const alex = new User('Alex', 28);   
+// const petro = new User('Petro', 32);
+// const alex = new User('Alex', 28);   
 
-alex.name = 'jonh';
-petro.hello();
-alex.hello();
+// alex.name = 'jonh';
+// petro.hello();
+// alex.hello();
 
-console.log(petro);
-console.log(alex);
+// console.log(petro);
+// console.log(alex);
+
+// function showThis() {
+//    console.log(this);
+// }
+// showThis();
  
+// function showThis(a, b) {
+//    console.log(this);
+//    function sum() {
+//       console.log(this);
+//       return a + b;
+//    }
+//    console.log(sum());
+// }
+// showThis(4, 5);
+
+// const obj = {
+//    a: 20,
+//    b: 15,
+//    sum: function() {
+//       console.log(this);
+//    }
+// }
+
+// console.log(obj);
+
+// function sayName() {
+//    console.log(this);
+//    console.log(this.name + surname);
+// }
+
+// const user = {
+//    name: "Jonh"
+// };
+
+// sayName.call(user, 'Smith'); 
+// sayName.apply(user, ['Smith']);
+
+
+// function count(num) {
+//    return this*num;
+// }
+
+// const double = count.bind(2);
+
+// console.log(double(3)); 
+// console.log(double(13));
+
+// const btn = document.querySelector('button');
+
+// btn.addEventListener('click', function() {
+//    this.style.backgroundColor = 'red';
+// });
+
+// btn.addEventListener('click', () => {
+//    this.style.backgroundColor = 'red';
+// });
+
+
+// const obj = {
+//    num: 5,
+//    sayNamber: function() {
+//       const say = () => {
+//          console.log(this);
+//       };
+//       say();
+//    }
+// }
+
+// obj.sayNamber();
+
+// const double = a => a * 2;
+// console.log(double(4));
+
