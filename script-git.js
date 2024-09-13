@@ -723,35 +723,50 @@
 // const double = a => a * 2;
 // console.log(double(4));
 
-   class Rectangle {
-      constructor(heigth, width) {
-         this.heigth = heigth;
-         this.width = width;
-      }
+   // class Rectangle {
+   //    constructor(heigth, width) {
+   //       this.heigth = heigth;
+   //       this.width = width;
+   //    }
 
-      calcAea() {
-         return this.heigth * this.width;
-      }
-   }
+   //    calcAea() {
+   //       return this.heigth * this.width;
+   //    }
+   // }
 
-   class ColorRectangleWithText extends Rectangle {
-      constructor(heigth, width, text, bgColor) {
-         super(heigth, width);
-         this.text = text;
-         this.bgColor = bgColor; 
-      }
+   // class ColorRectangleWithText extends Rectangle {
+   //    constructor(heigth, width, text, bgColor) {
+   //       super(heigth, width);
+   //       this.text = text;
+   //       this.bgColor = bgColor; 
+   //    }
 
-      showMyProps() {
-         console.log(`Text: ${this.text}, color: ${this.bgColor}`);
-      }
-   }
+   //    showMyProps() {
+   //       console.log(`Text: ${this.text}, color: ${this.bgColor}`);
+   //    }
+   // }
 
-   const div = new ColorRectangleWithText(25, 10, 'Hello Word', 'red');
-   div.showMyProps();
-   console.log(div.calcAea());
+   // const div = new ColorRectangleWithText(25, 10, 'Hello Word', 'red');
+   // div.showMyProps();
+   // console.log(div.calcAea());
 
    // const squera = new Rectangle(10, 10);
    // const long = new Rectangle(20, 100);
 
    // console.log(squera.calcAea());
    // console.log(long.calcAea());
+
+
+   const log = function(a, b, ...rest) {
+      console.log(a, b, rest);
+   }
+
+
+   log('bs', 'rest', 'opetr', 'user');
+
+   function calcOrDuble(num, basis = 2) {
+      console.log(num * basis);
+   } 
+
+   calcOrDuble(3, 5);
+   calcOrDuble(3);
