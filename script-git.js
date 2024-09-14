@@ -757,16 +757,42 @@
    // console.log(long.calcAea());
 
 
-   const log = function(a, b, ...rest) {
-      console.log(a, b, rest);
-   }
+   // const log = function(a, b, ...rest) {
+   //    console.log(a, b, rest);
+   // }
 
 
-   log('bs', 'rest', 'opetr', 'user');
+   // log('bs', 'rest', 'opetr', 'user');
 
-   function calcOrDuble(num, basis = 2) {
-      console.log(num * basis);
-   } 
+   // function calcOrDuble(num, basis = 2) {
+   //    console.log(num * basis);
+   // } 
 
-   calcOrDuble(3, 5);
-   calcOrDuble(3);
+   // calcOrDuble(3, 5);
+   // calcOrDuble(3);
+
+
+
+   // const persone = {
+   //    name: 'Alex',
+   //    tel: '+3832452354'
+   // };
+
+   //  console.log(JSON.stringify(persone));
+   //  console.log(JSON.parse(JSON.stringify(persone)));
+
+   //  const persone = {
+   //    name: 'Alex',
+   //    tel: '+3832452354',
+   //    parents: {
+   //       mom: 'Olga',
+   //       dad: 'Michel'
+   //    }
+   // };
+
+   // const clone = JSON.parse(JSON.stringify(persone));
+
+   // clone.parents.mom = 'sofia';
+
+   // console.log(persone);
+   // console.log(clone);
